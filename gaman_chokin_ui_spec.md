@@ -1,4 +1,4 @@
-# 我慢貯金アプリ UI仕様メモ
+# 我慢貯金アプリ 仕様書
 
 ## コンセプト
 日常の「我慢」を金額として記録・可視化するアプリ。
@@ -101,6 +101,31 @@
   name: string     // ボタン名（例：「タクシー」）
 }
 ```
+
+---
+
+## システム仕様
+
+### 対応プラットフォーム
+- iOS / Android（クロスプラットフォーム）
+
+### 技術スタック
+
+| 役割 | 採用技術 |
+|---|---|
+| フレームワーク | React Native + Expo |
+| 言語 | JavaScript（TypeScriptは後回しでOK） |
+| データ保存 | AsyncStorage（端末内ローカル保存） |
+| 広告 | expo-ads-admob |
+
+### データ保存方針
+- サーバー不要、端末内にローカル保存
+- 記録データ・登録済みボタンともにAsyncStorageで永続化
+- キー設計例：`records`、`registeredButtons`
+
+### 開発環境
+- Expo Go アプリで実機確認可能（Android / iOS 両対応）
+- Node.js + Expo CLI
 
 ---
 
