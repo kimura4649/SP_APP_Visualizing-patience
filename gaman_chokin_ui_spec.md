@@ -186,12 +186,21 @@
 
 ### 技術スタック
 
-| 役割 | 採用技術 |
-|---|---|
-| フレームワーク | React Native + Expo |
-| 言語 | JavaScript（TypeScriptは後回しでOK） |
-| データ保存 | AsyncStorage（端末内ローカル保存） |
-| 広告 | react-native-google-mobile-ads |
+| 役割 | 採用技術 | バージョン |
+|---|---|---|
+| フレームワーク | React Native + Expo | react-native: 0.81.5 / expo: ~54.0.0 |
+| 言語 | JavaScript | react: 19.1.0 |
+| 画面遷移 | React Navigation (Stack) | @react-navigation/native: ^7.0.0 / @react-navigation/stack: ^7.0.0 |
+| データ保存 | AsyncStorage | @react-native-async-storage/async-storage: 2.2.0 |
+| セーフエリア | react-native-safe-area-context | ~5.6.0 |
+| ジェスチャー | react-native-gesture-handler | ~2.28.0 |
+| 画面管理 | react-native-screens | ~4.16.0 |
+| ステータスバー | expo-status-bar | ~3.0.9 |
+| メール送信 | expo-mail-composer | ~15.0.8 |
+| 広告 | プレースホルダー実装（react-native-google-mobile-ads は新アーキテクチャ必須のため除外） | - |
+
+### アーキテクチャ設定
+- `newArchEnabled: false`（旧アーキテクチャで動作）
 
 ### データ保存方針
 - サーバー不要、端末内にローカル保存
