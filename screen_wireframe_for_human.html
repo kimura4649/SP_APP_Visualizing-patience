@@ -106,6 +106,14 @@
     line-height: 1.4;
   }
   .btn-item .amount { font-weight: bold; color: #2a7ae4; }
+  .btn-item.btn-custom { background: #eef5ff; border-color: #2a7ae4; }
+  .section-label {
+    font-size: 9px;
+    color: #888;
+    margin: 2px 0 2px 2px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
   .custom-card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -297,6 +305,14 @@
         <!-- MID 30% -->
         <div class="mid-area area">
           <span class="area-label">← 中央 30%</span>
+          <!-- 登録済みボタン（上部に優先表示） -->
+          <div class="section-label">登録済み</div>
+          <div class="btn-grid">
+            <div class="btn-item btn-custom"><div class="amount">+¥350</div><div>タクシー代</div></div>
+            <div class="btn-item btn-custom"><div class="amount">+¥600</div><div>カフェ</div></div>
+          </div>
+          <!-- デフォルトボタン（登録済みの下） -->
+          <div class="section-label">デフォルト</div>
           <div class="btn-grid">
             <div class="btn-item"><div class="amount">+¥150</div><div>ジュース</div></div>
             <div class="btn-item"><div class="amount">+¥500</div><div>コンビニ</div></div>
